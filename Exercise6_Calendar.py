@@ -13,21 +13,7 @@ start_num = given_ym.isoweekday()
 monthinteger = month
 name_month = datetime.date(1900, monthinteger, 1).strftime('%B')
 print name_month,year
-for i in range (7):
-    if i == 0:
-        print 'S','\t',
-    elif  i == 1:
-        print 'M','\t',
-    elif  i == 2:
-        print 'T','\t',
-    elif  i == 3:
-        print 'W','\t',
-    elif  i == 4:
-        print 'T','\t',
-    elif  i == 5:
-        print 'F','\t',
-    elif  i == 6:
-        print 'S'
+print 'S','\t','M','\t','T','\t','W','\t','T','\t','F','\t','S'
 if start_num == 1:
     index = 2
 elif start_num == 2:
