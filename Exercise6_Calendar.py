@@ -28,151 +28,64 @@ elif start_num == 6:
     index = 7
 elif start_num == 7:
     index = 1
+
+def print_calendar1(index, n):
+    for i in range(1, n):
+        if i == 1:
+            if index % 7 == 0 and index != 1:
+                print (start_num * '\t'), i, '\t'
+                index = 0
+            else:
+                print (start_num * '\t'), i, '\t',
+        else:
+            if index % 7 == 0 and index != 1:
+                print i, '\t'
+                index = 0
+            else:
+                print i, '\t',
+        index = index + 1
+
+def print_calendar2(index, n):
+    for i in range(1, n):
+        if index % 7 == 0 and index != 1:
+            print i, '\t'
+            index = 0
+        else:
+            print i, '\t',
+        index = index + 1
+
 if month <= 7:
     if month % 2 == 1:
         if start_num != 7:
-            for i in range (1,32):
-                if i == 1:
-                    if index % 7 == 0 and index != 1:
-                        print (start_num * '\t'), i, '\t'
-                        index = 0
-                    else:
-                        print (start_num * '\t'), i, '\t',
-                else:
-                    if index % 7 == 0 and index != 1:
-                        print i, '\t'
-                        index = 0
-                    else:
-                        print i, '\t',
-                index = index + 1
+            print_calendar1(index, 32)
         else:
-            for i in range(1, 32):
-                if index % 7 == 0 and index != 1:
-                    print i, '\t'
-                    index = 0
-                else:
-                    print i, '\t',
-                index = index + 1
+           print_calendar2(index, 32)
     elif month % 2 == 0:
         if month != 2:
             if start_num != 7:
-                for i in range(1, 31):
-                    if i == 1:
-                        if index % 7 == 0 and index != 1:
-                            print (start_num * '\t'), i, '\t'
-                            index = 0
-                        else:
-                            print (start_num * '\t'), i, '\t',
-                    else:
-                        if index % 7 == 0 and index != 1:
-                            print i, '\t'
-                            index = 0
-                        else:
-                            print i, '\t',
-                    index = index + 1
+                print_calendar1(index, 31)
             else:
-                for i in range(1, 31):
-                    if index % 7 == 0 and index != 1:
-                        print i, '\t'
-                        index = 0
-                    else:
-                        print i, '\t',
-                    index = index + 1
+                print_calendar2(index, 31)
         else:
             if year % 4 == 0:
                 if start_num != 7:
-                    for i in range(1, 30):
-                        if i == 1:
-                            if index % 7 == 0 and index != 1:
-                                print (start_num * '\t'), i, '\t'
-                                index = 0
-                            else:
-                                print (start_num * '\t'), i, '\t',
-                        else:
-                            if index % 7 == 0 and index != 1:
-                                print i, '\t'
-                                index = 0
-                            else:
-                                print i, '\t',
-                        index = index + 1
+                    print_calendar1(index, 30)
                 else:
-                    for i in range(1, 30):
-                        if index % 7 == 0 and index != 1:
-                            print i, '\t'
-                            index = 0
-                        else:
-                            print i, '\t',
-                        index = index + 1
+                    print_calendar2(index, 30)
             else:
                 if start_num != 7:
-                    for i in range(1, 29):
-                        if i == 1:
-                            if index % 7 == 0 and index != 1:
-                                print (start_num * '\t'), i, '\t'
-                                index = 0
-                            else:
-                                print (start_num * '\t'), i, '\t',
-                        else:
-                            if index % 7 == 0 and index != 1:
-                                print i, '\t'
-                                index = 0
-                            else:
-                                print i, '\t',
-                        index = index + 1
+                    print_calendar1(index, 29)
                 else:
-                    for i in range(1, 29):
-                        if index % 7 == 0 and index != 1:
-                            print i, '\t'
-                            index = 0
-                        else:
-                            print i, '\t',
-                        index = index + 1
+                    print_calendar2(index,29)
 elif month > 7:
     if month % 2 == 1:
         if start_num != 7:
-            for i in range (1,31):
-                if i == 1:
-                    if index % 7 == 0 and index != 1:
-                        print (start_num * '\t'), i, '\t'
-                        index = 0
-                    else:
-                        print (start_num * '\t'), i, '\t',
-                else:
-                    if index % 7 == 0 and index != 1:
-                        print i, '\t'
-                        index = 0
-                    else:
-                        print i, '\t',
-                index = index + 1
+            print_calendar1(index, 31)
         else:
-            for i in range(1, 31):
-                if index % 7 == 0 and index != 1:
-                    print i, '\t'
-                    index = 0
-                else:
-                    print i, '\t',
-                index = index + 1
+            print_calendar2(index, 31)
     elif month % 2 == 0:
         if start_num != 7:
-            for i in range(1, 32):
-                if i == 1:
-                    if index % 7 == 0 and index != 1:
-                        print (start_num * '\t'), i, '\t'
-                        index = 0
-                    else:
-                        print (start_num * '\t'), i, '\t',
-                else:
-                    if index % 7 == 0 and index != 1:
-                        print i, '\t'
-                        index = 0
-                    else:
-                        print i, '\t',
-                index = index + 1
+            print_calendar1(index, 32)
         else:
-            for i in range(1, 32):
-                if index % 7 == 0 and index != 1:
-                    print i, '\t'
-                    index = 0
-                else:
-                    print i, '\t',
-                index = index + 1
+            print_calendar2(index, 32)
+
