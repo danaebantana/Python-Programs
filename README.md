@@ -1,1 +1,1 @@
-# python_exercises
+University Exercises using python
